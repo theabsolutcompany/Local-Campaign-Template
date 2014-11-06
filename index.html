@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Local custom campaign template</title>
+	<!--Below are required styles and scripts. They include fonts from the absolut font service, 
+	styles that are required to make the header and footer work, and scripts that must be loaded 
+	early (jQuery, Modernizr and jsonp callbacks for header, footer and avp)-->	
+	<!--DO NOT REMOVE CONTENT START-->
+	<link rel="stylesheet" href="http://fonts.absolut.com/css?collection=absolut-icon|absolut" type="text/css" />
+ 	<link href="/local-campaign-assets/style" rel="stylesheet"/>
+    <script src="/local-campaign-assets/scripts-head"></script>
+	<!--DO NOT REMOVE CONTENT END-->
+	
+	<!--YOUR CONTENT HERE-->
+	<link rel="stylesheet" href="/us/template/css/mystyle.css" type="text/css" />
+	<!--YOUR CONTENT HERE-->
+</head>
+<body>
+	<!--This loads Google Tag Manager which will also load Googel Analytics connected to the absolut account-->	
+	<!--DO NOT REMOVE CONTENT START-->
+	<noscript>
+		<iframe src="//www.googletagmanager.com/ns.html?id=GTM-MGQ3FD" height="0" width="0" style="display: none; visibility: hidden"></iframe>
+	</noscript>
+	<script>
+		(function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer', 'GTM-MGQ3FD');
+	</script>
+	<!--DO NOT REMOVE CONTENT END-->
+	
+	<!--This will load the absolut.com AVP using jsonp. Important! Change the value of the language parameter
+	to load the correct AVP for your market. Important! The AVP will currently only work when your site is loaded
+	on the absolut servers-->		
+	<!--DO NOT REMOVE CONTENT START-->
+	<script src="/api/globalparts/avp?callback=absolutcom.avpCallback&language=en" type="text/javascript"></script>
+	<!--DO NOT REMOVE CONTENT END-->
+	
+	<!--This is the container elment for the absolut.com header. The header will be populated with content using jsonp-->		
+	<!--DO NOT REMOVE CONTENT START-->
+	<div id="header"></div>
+	<!--DO NOT REMOVE CONTENT END-->
+	
+	<!--YOUR CONTENT HERE-->
+	<div class="my-content">
+		<p>Your content here</p>
+		<p><a href="/us/template/page/">Link root</a></p>
+		<p><a href="page/">Link relative</a></p>
+	</div>
+	<!--YOUR CONTENT HERE-->
+	
+	<!--This is the container elment for the absolut.com footer. The header will be populated with content using jsonp-->		
+	<!--DO NOT REMOVE CONTENT START-->
+	<footer id="global-footer"></footer>
+	<!--DO NOT REMOVE CONTENT END-->
+	
+	<!--This will load the absolut.com header and footer using jsonp. Important! Change the value of the language parameter
+	to load the correct AVP for your market-->	
+	<!--DO NOT REMOVE CONTENT START-->
+	<script src="/api/globalparts/header?callback=absolutcom.headerCallback&language=en-us" type="text/javascript"></script>
+	<script src="/api/globalparts/footer?callback=absolutcom.footerCallback&language=en-us" type="text/javascript"></script>
+	<!--DO NOT REMOVE CONTENT END-->
+	
+	<!--This will load scripts that are required to make the header, footer and avp work properly-->	
+	<!--DO NOT REMOVE CONTENT START-->
+	<script src="/local-campaign-assets/scripts-body" type="text/javascript"></script>
+	<!--DO NOT REMOVE CONTENT END-->
+	
+	<!--This will push data into Google Tag Mananger that will result in a page view in Google Analytics in the absolut account-->	
+	<!--DO NOT REMOVE CONTENT START-->
+	<script>       
+		$(window).on('avp_passed', function () {
+			window.dataLayer.push({ 'event': 'avp_passed' });
+		});
+	</script>
+	<!--DO NOT REMOVE CONTENT END-->
+	
+	<!--This load the global dmp tag manager-->	
+	<!--DO NOT REMOVE CONTENT START-->
+	<noscript>
+		<iframe src='http://dmp.pernod-ricard.com/JScript/iframe.php?container=TEROCwEHTEhdUEZV' height='0' width='0' style='display:none;visibility:hidden'></iframe>
+	</noscript>
+	<script>(function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (d.getElementById(id)) return; js = d.createElement(s); js.id = id; js.src = 'http://dmp.pernod-ricard.com/JScript/pernod-ricard-api.js?container=TEROCwEHTEhdUEZV'; fjs.parentNode.insertBefore(js, fjs.nextSibling); }(document, 'script', 'pdrd_' + new Date().getTime()));</script>
+	<!--DO NOT REMOVE CONTENT END-->
+</body>
+</html>
