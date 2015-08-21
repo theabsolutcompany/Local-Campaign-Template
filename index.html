@@ -12,9 +12,9 @@
     <script src="/local-campaign-assets/scripts-head"></script>
 	<!--DO NOT REMOVE CONTENT END-->
 	
-	<!--YOUR CONTENT HERE-->
+	<!--YOUR HEADER FIELDS HERE-->
 	<link rel="stylesheet" href="/us/template/css/mystyle.css" type="text/css" />
-	<!--YOUR CONTENT HERE-->
+	<!--YOUR HEADER FIELDS HERE-->
 </head>
 <body>
 	<!--This loads Google Tag Manager which will also load Googel Analytics connected to the absolut account-->	
@@ -24,18 +24,16 @@
 	</noscript>
 	<script>
 		(function (w, d, s, l, i) { w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' }); var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src = '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f); })(window, document, 'script', 'dataLayer', 'GTM-MGQ3FD');
-	</script>
-	<!--DO NOT REMOVE CONTENT END-->
-	
+	</script>	
 	<!--This will load the absolut.com AVP using jsonp. Important! Change the value of the language parameter
 	to load the correct AVP for your market. Important! The AVP will currently only work when your site is loaded
 	on the absolut servers-->		
-	<!--DO NOT REMOVE CONTENT START-->
-	<script src="/api/globalparts/avp?callback=absolutcom.avpCallback&language=en" type="text/javascript"></script>
+	<script src="/api/globalparts/avp?callback=absolutcom.avpCallback&amp;language=en" type="text/javascript"></script>
 	<!--DO NOT REMOVE CONTENT END-->
 	
 	<!--This is the container elment for the absolut.com header. The header will be populated with content using jsonp-->		
 	<!--DO NOT REMOVE CONTENT START-->
+	<div id="global-header-pusher"></div>
 	<div id="header"></div>
 	<!--DO NOT REMOVE CONTENT END-->
 	
@@ -55,8 +53,8 @@
 	<!--This will load the absolut.com header and footer using jsonp. Important! Change the value of the language parameter
 	to load the correct AVP for your market-->	
 	<!--DO NOT REMOVE CONTENT START-->
-	<script src="/api/globalparts/header?callback=absolutcom.headerCallback&language=en-us" type="text/javascript"></script>
-	<script src="/api/globalparts/footer?callback=absolutcom.footerCallback&language=en-us" type="text/javascript"></script>
+	<script src="/api/globalparts/header?callback=absolutcom.headerCallback&amp;language=en-us" type="text/javascript"></script>
+	<script src="/api/globalparts/footer?callback=absolutcom.footerCallback&amp;language=en-us" type="text/javascript"></script>
 	<!--DO NOT REMOVE CONTENT END-->
 	
 	<!--This will load scripts that are required to make the header, footer and avp work properly-->	
